@@ -5,12 +5,12 @@
   "main": "dist/index.js",
   "scripts": {
     "predev": "prisma generate",
-    "dev": "nodemon",
+    "dev": "../node_modules/.bin/nodemon",
     "prebuild": "prisma generate",
-    "build": "tsc",
+    "build": "../node_modules/.bin/tsc",
     "start": "node dist/index.js",
-    "lint": "eslint \"src/**/*.ts\"",
-    "test": "node --test tests/**/*.test.js",
+    "lint": "../node_modules/.bin/eslint \"backend/src/**/*.ts\"",
+    "test": "node --test backend/tests/**/*.test.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev"
   },
